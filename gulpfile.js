@@ -1,25 +1,34 @@
 var gulp = require('gulp');
 var browserify = require('gulp-browserify');
 var concat  = require('gulp-concat');
-var package = require('./package.json');
+var uglify = require('gulp-uglify');
 
 gulp.task('browserify', [], function () {
-  var options = package.browserify;
-  options.debug = !gulp.env.production;
+  var options = {
+    transform: [
+      'reactify',
+      'envify'
+    ]
+  };
+  options.debug = !process.env.NODE_ENV;
   options.verbose = true;
-  gulp.src(package.main)
+
+  return gulp.src('public/js/app.js')
     .pipe(browserify(options))
     .pipe(concat('app.js'))
     .pipe(gulp.dest('dist/js'))
 });
 
-gulp.task('copy', [], function () {
-  gulp.src('src/index.html')
-    .pipe(gulp.dest('dist'));
+gulp.task('uglify', ['browserify'], function () {
+  return gulp.src('dist/js/app.js')
+    .pipe(uglify())
+    .pipe(gulp.dest('dist/js/'))
 });
 
-gulp.task('default', ['browserify', 'copy']);
+gulp.task('build', ['uglify']);
+
+gulp.task('default', ['browserify']);
 
 gulp.task('serve', function () {
-  gulp.watch('src/**', ['default']);
+  gulp.watch('public/**', ['default']);
 });
