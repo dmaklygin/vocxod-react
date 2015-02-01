@@ -1,7 +1,8 @@
 var React = require('react');
-var SomeComponent = require('./components/some-component.js');
+var Line = require('./components/Line.react.js');
+
 
 React.render(
-  <SomeComponent />,
+  <Line />,
   document.querySelector('.app')
 );

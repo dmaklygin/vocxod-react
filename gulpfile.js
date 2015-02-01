@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var browserify = require('gulp-browserify');
 var concat  = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var stylus = require('gulp-stylus');
 
 gulp.task('browserify', [], function () {
   var options = {
@@ -10,7 +11,7 @@ gulp.task('browserify', [], function () {
       'envify'
     ]
   };
-  options.debug = !process.env.NODE_ENV;
+  options.debug = (process.env.NODE_ENV != 'production');
   options.verbose = true;
 
   return gulp.src('public/js/app.js')
@@ -25,9 +26,17 @@ gulp.task('uglify', ['browserify'], function () {
     .pipe(gulp.dest('dist/js/'))
 });
 
-gulp.task('build', ['uglify']);
+gulp.task('css', function () {
+  gulp.src(['public/css/*.styl', 'public/css/**/*.styl'])
+    .pipe(stylus({
+      compress: (process.env.NODE_ENV == 'production')
+    }))
+    .pipe(gulp.dest('dist/css/'));
+});
 
-gulp.task('default', ['browserify']);
+gulp.task('build', ['uglify', 'css']);
+
+gulp.task('default', ['browserify', 'css']);
 
 gulp.task('serve', function () {
   gulp.watch('public/**', ['default']);
