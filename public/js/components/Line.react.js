@@ -9,7 +9,7 @@ var Line = React.createClass({
   render: function () {
     return (
       <div className="line">
-        <div className="line__container">
+        <div className="line__container row">
           <div className="line__sport">
             <LineFilterSports />
           </div>
