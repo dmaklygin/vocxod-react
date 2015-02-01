@@ -1,0 +1,31 @@
+{
+  "name": "vocx-react",
+  "version": "0.0.1",
+  "description": "Vocxod Application",
+  "main": "src/js/app.js",
+  "scripts": {
+    "start": "gulp serve"
+  },
+  "keywords": [
+    "reactjs",
+    "nodejs"
+  ],
+  "author": "d.maklygin",
+  "license": "MIT",
+  "dependencies": {
+    "flux": "~2.0.1",
+    "react": "~0.12.2"
+  },
+  "devDependencies": {
+    "envify": "~3.2.0",
+    "reactify": "~1.0.0",
+    "gulp-concat": "~2.4.3",
+    "gulp-browserify": "~0.5.1"
+  },
+  "browserify": {
+    "transform": [
+      "reactify",
+      "envify"
+    ]
+  }
+}
