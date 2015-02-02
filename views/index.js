@@ -1,3 +1,4 @@
+/** @jsx React.DOM */
 var DefaultLayout = require('./layout');
 var React = require('react');
 

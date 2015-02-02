@@ -4,7 +4,7 @@ var Line = require('./components/Line.react.js');
 
 window.React = React;
 
-React.render(
-  <Line />,
-  document.querySelector('.app')
-);
+//React.render(
+//  <Line />,
+//  document.querySelector('.app')
+//);

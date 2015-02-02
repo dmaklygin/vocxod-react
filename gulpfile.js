@@ -14,14 +14,14 @@ gulp.task('browserify', [], function () {
   options.debug = (process.env.NODE_ENV != 'production');
   options.verbose = true;
 
-  return gulp.src('public/js/app.js')
+  return gulp.src('public/js/*.page.js')
     .pipe(browserify(options))
-    .pipe(concat('app.js'))
+    //.pipe(concat('app.js'))
     .pipe(gulp.dest('dist/js'))
 });
 
 gulp.task('uglify', ['browserify'], function () {
-  return gulp.src('dist/js/app.js')
+  return gulp.src('dist/js/*.page.js')
     .pipe(uglify())
     .pipe(gulp.dest('dist/js/'))
 });
