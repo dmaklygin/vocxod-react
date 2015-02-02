@@ -1,8 +1,8 @@
-# Voshod Project [![Build Status](https://travis-ci.org/dmaklygin/voshod-react.svg)](https://travis-ci.org/dmaklygin/voshod-react)
+# Voskhod Project [![Build Status](https://travis-ci.org/dmaklygin/voshod-react.svg)](https://travis-ci.org/dmaklygin/voskhod-react)
 
-Implementation of Voshod based on Flux & React
+Implementation of Voskhod based on Flux & React
 
 
 # Demo
 
-Demo site is placed on heroku [voshod-react.herokuapp.com](http://voshod-react.herokuapp.com/)
+Demo site is placed on heroku [voskhod-react.herokuapp.com](http://voskhod-react.herokuapp.com/)
