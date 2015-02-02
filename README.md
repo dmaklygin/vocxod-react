@@ -1,4 +1,4 @@
-# Voskhod Project [![Build Status](https://travis-ci.org/dmaklygin/voshod-react.svg)](https://travis-ci.org/dmaklygin/voskhod-react)
+# Voskhod Project [![Build Status](https://travis-ci.org/dmaklygin/voskhod-react.svg?branch=master)](https://travis-ci.org/dmaklygin/voskhod-react)
 
 Implementation of Voskhod based on Flux & React
 
