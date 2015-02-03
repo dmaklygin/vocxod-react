@@ -1,10 +1,19 @@
+var Header = require('./components/header/Header.react');
+var Footer = require('./components/footer/Footer.react');
 var React = require('react');
-var Line = require('./components/Line.react.js');
 
+var App = React.createClass({
+  render: function () {
+    return (
+      <div className="application">
+        <Header />
+        <div>
+          {this.props.children}
+        </div>
+        <Footer />
+      </div>
+    )
+  }
+});
 
-window.React = React;
-
-//React.render(
-//  <Line />,
-//  document.querySelector('.app')
-//);
+module.exports = App;

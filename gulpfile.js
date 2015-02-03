@@ -9,7 +9,8 @@ gulp.task('browserify', [], function () {
     transform: [
       'reactify',
       'envify'
-    ]
+    ],
+    standalone: 'page'
   };
   options.debug = (process.env.NODE_ENV != 'production');
   options.verbose = true;
