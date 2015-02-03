@@ -35,7 +35,8 @@
     "jest-cli": "~0.2.2",
     "gulp-stylus": "~2.0.0",
     "express-react-views": "^0.7.0",
-    "request": "^2.53.0"
+    "request": "^2.53.0",
+    "jquery": "~2.1.3"
   },
   "jest": {
     "rootDir": "./public/js"
