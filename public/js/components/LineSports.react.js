@@ -4,6 +4,7 @@ var React = require('react');
 var LineSports = React.createClass({
   render: function () {
     var sports = {};
+
     this.props.sports.forEach(function(sport) {
       sports['l-s-' + sport.id] =
         <div className="line-sport">

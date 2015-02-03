@@ -4,6 +4,7 @@ var DefaultLayout = React.createClass({
   render: function() {
 
     var _module = require('../public/js/' + this.props._module);
+
     if (!_module) {
       throw new Error('Module ' + this.props._module + ' is not found');
     }
