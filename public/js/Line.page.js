@@ -21,6 +21,7 @@ module.exports = {
   },
 
   render: function(props) {
+    window.React = React;
     React.render(<LinePage {...props} />, document.querySelector('.app'));
   }
 };

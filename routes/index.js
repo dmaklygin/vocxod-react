@@ -36,11 +36,11 @@ router.get('/', function(req, res) {
 });
 
 router.get('/line', function(req, res) {
-  res.render('line', { title: 'Sports Line', sports: sports });
+  res.render('line', { title: 'Sports Line', data: { sports: sports } });
 });
 
 router.get('/live', function(req, res) {
-  res.render('live', { title: 'Sports Live', sports: sports });
+  res.render('live', { title: 'Sports Live', data: { sports: sports } });
 });
 
 module.exports = router;

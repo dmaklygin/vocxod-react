@@ -21,13 +21,7 @@ module.exports = {
   },
 
   render: function(props) {
-
     window.React = React;
-
-    React.render(
-      <Live {...props} />,
-      document.querySelector('.app')
-    );
-
+    React.render(<LivePage {...props} />, document.querySelector('.app'));
   }
 };

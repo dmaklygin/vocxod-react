@@ -2,6 +2,14 @@
 var React = require('react');
 var DefaultLayout = React.createClass({
   render: function() {
+
+    var _module = require('../public/js/' + this.props._module);
+    if (!_module) {
+      throw new Error('Module ' + this.props._module + ' is not found');
+    }
+
+    var clientModulePath = '/js/' + this.props._module;
+
     return (
       <html lang="en">
         <head>
@@ -10,6 +18,9 @@ var DefaultLayout = React.createClass({
         </head>
         <body>
           {this.props.children}
+          <div className="app" dangerouslySetInnerHTML={{__html: _module.toString(this.props.data) }}></div>
+          <script src={clientModulePath}></script>
+          <script dangerouslySetInnerHTML={{__html: 'page.render(' + JSON.stringify(this.props.data || {}) + ')'}} />
         </body>
       </html>
     )
