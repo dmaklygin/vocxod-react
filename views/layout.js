@@ -10,7 +10,7 @@ var DefaultLayout = React.createClass({
     }
 
     var clientModulePath = '/js/' + this.props._module;
-
+    //dangerouslySetInnerHTML={{__html: _module.toString(this.props.data) }}
     return (
       <html lang="en">
         <head>
@@ -19,7 +19,7 @@ var DefaultLayout = React.createClass({
         </head>
         <body>
           {this.props.children}
-          <div className="app" dangerouslySetInnerHTML={{__html: _module.toString(this.props.data) }}></div>
+          <div className="app"></div>
           <script src={clientModulePath}></script>
           <script dangerouslySetInnerHTML={{__html: 'page.render(' + JSON.stringify(this.props.data || {}) + ')'}} />
         </body>

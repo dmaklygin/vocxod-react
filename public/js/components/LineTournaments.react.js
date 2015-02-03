@@ -20,7 +20,6 @@ var LineTournaments = React.createClass({
         </div>
     });
 
-
     return (
       <div className="line-tournaments">
         <div className="line-tournaments__contaier">
