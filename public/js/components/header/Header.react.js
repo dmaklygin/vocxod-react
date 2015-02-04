@@ -6,6 +6,7 @@ var Header = React.createClass({
     return (
       <header className="header">
         <div className="header__logo">LOGOTYPE</div>
+
         <User />
       </header>
     )

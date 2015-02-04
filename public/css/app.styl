@@ -1,3 +1,18 @@
+@import 'nib'
+@import 'variables'
+
+global-reset()
+normalize-css()
+
+*,
+*:before, *:after {
+  box-sizing border-box
+}
+
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: Arial, "Helvetica Neue", Helvetica, "Lucida Grande", sans-serif;
   font-size: 14px;
@@ -6,20 +21,17 @@ body {
   background-color: #141415;
 }
 
+.container {
+  width:1271px;
+  height: 100%;
 
-*:before, *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-}
+  margin-right: auto;
+  margin-left: auto;
 
-.row:after {
-  clear: both;
-}
+  padding-left: ($padding / 2);
+  padding-right: ($padding / 2);
 
-.row:before, .row:after {
-  content: " ";
-  display: table;
+  clearfix();
 }
 
 @import "components/*"

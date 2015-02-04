@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var browserify = require('gulp-browserify');
 var concat  = require('gulp-concat');
 var uglify = require('gulp-uglify');
+var nib = require('nib');
 var stylus = require('gulp-stylus');
 
 gulp.task('browserify', [], function () {
@@ -28,9 +29,10 @@ gulp.task('uglify', ['browserify'], function () {
 });
 
 gulp.task('css', function () {
-  gulp.src(['public/css/*.styl', 'public/css/**/*.styl'])
+  gulp.src(['public/css/app.styl'])
     .pipe(stylus({
-      compress: (process.env.NODE_ENV == 'production')
+      compress: (process.env.NODE_ENV == 'production'),
+      use: nib()
     }))
     .pipe(gulp.dest('dist/css/'));
 });

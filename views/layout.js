@@ -19,7 +19,9 @@ var DefaultLayout = React.createClass({
         </head>
         <body>
           {this.props.children}
-          <div className="app"></div>
+          <div className="container">
+            <div className="app"></div>
+          </div>
           <script src={clientModulePath}></script>
           <script dangerouslySetInnerHTML={{__html: 'page.render(' + JSON.stringify(this.props.data || {}) + ')'}} />
         </body>
