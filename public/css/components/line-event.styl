@@ -1,0 +1,72 @@
+.line-event
+  line-height: $defaultFontSize;
+
+  background linear-gradient(top, #343536, #141516);
+  border: 1px solid black;
+  border-bottom: none;
+
+.line-event__datetime
+  width: 50px;
+
+  border-right: 1px solid #232324;
+
+  color: darkgrey;
+
+  font-size: $smallFontSize;
+  text-align: center;
+
+.line-event__date
+  color: #fbc836;
+
+.line-event__info
+  width: 136px;
+  max-width: 136px;
+  padding: 12px 5px;
+  margin: 0;
+  overflow: hidden;
+
+  border-left: 1px solid #2f3030;
+  border-right: 1px solid #272829;
+
+  cursor: pointer;
+
+  .line-event__player
+    font-size: ($defaultFontSize - 2);
+    max-width: 100%;
+    line-height: 1.2em;
+    overflow ellipsis
+
+.line-event__counter
+  position: relative;
+  min-width: 50px;
+  width: 50px;
+
+  border-left: 1px solid #343435;
+  border-right: 1px solid #272829;
+
+  cursor: pointer;
+
+  text-align: right;
+
+.line-event__counter-container
+  position: relative;
+
+  &::before
+    content: ">";
+    position: absolute;
+    /*background: url(/assets/icons/arrow_bold-0497c9506ab511b68eefd614204df108.png) no-repeat;*/
+    top: 50%;
+    right: 5px;
+    z-index: 2;
+    width: 8px;
+    height: 11px;
+    margin: -5px 0 0 0;
+
+.line-event__counter-text
+  position: absolute;
+  top: 50%;
+  right: 16px;
+  margin-top: -6px;
+
+
+

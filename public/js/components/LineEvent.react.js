@@ -54,9 +54,14 @@ var LineEvent = React.createClass({
     var outcomes = this.getMainOutcomes();
     return (
       <tr className="line-event">
+        <td className="line-event__datetime">
+          <div className="line-event__date">Date</div>
+          <div className="line-event__time">Time</div>
+        </td>
         <td className="line-event__info">
           <div className="line-event__players">
-            {event.home} VS {event.away}
+            <div className="line-event__player">"1.{event.home}"</div>
+            <div className="line-event__player">{event.away}</div>
           </div>
           <div className="line-event__description">
 
@@ -64,7 +69,7 @@ var LineEvent = React.createClass({
         </td>
         <td className="line-event__counter">
           <div className="line-event__counter-container">
-            0
+            <div className="line-event__counter-text">10</div>
           </div>
         </td>
         {outcomes.map(function(outcome) {
