@@ -8,7 +8,7 @@ var LineTournaments = React.createClass({
       tournaments['l-t-' + tournament.id] =
         <div className="line-tournament">
           <div className="line-tournament__header">{tournament.name}</div>
-          <table className="line_tournament__events">
+          <table className="line-tournament__events">
             <tbody>
               {tournament.events.map(function (event) {
                 var key = 'l-e-' + event.id;
@@ -23,7 +23,7 @@ var LineTournaments = React.createClass({
 
     return (
       <div className="line-tournaments">
-        <div className="line-tournaments__contaier">
+        <div className="line-tournaments__container">
           {tournaments}
         </div>
       </div>
