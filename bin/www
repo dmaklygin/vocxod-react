@@ -4,9 +4,17 @@
  * Module dependencies.
  */
 
+
 var app = require('../app');
 var debug = require('debug')('test5:server');
 var http = require('http');
+
+if (app.get('env') === 'production') {
+  require('nodetime').profile({
+    accountKey: '539c57fd6a5e82435101ce47022b2aa673ea97b4',
+    appName: 'Voskhod React Application'
+  });
+}
 
 /**
  * Get port from environment and store in Express.

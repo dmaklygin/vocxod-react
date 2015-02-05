@@ -37,7 +37,8 @@
     "express-react-views": "^0.7.0",
     "request": "^2.53.0",
     "jquery": "~2.1.3",
-    "nib": "^1.1.0"
+    "nib": "^1.1.0",
+    "nodetime": "^0.8.15"
   },
   "jest": {
     "rootDir": "./public/js"
