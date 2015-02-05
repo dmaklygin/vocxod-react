@@ -5,12 +5,9 @@ var React = require('react');
 var App = React.createClass({
   render: function () {
     return (
-      <div className="application">
+      <div className="app__container">
         <Header />
-        <div>
-          {this.props.children}
-        </div>
-        <Footer />
+        {this.props.children}
       </div>
     )
   }

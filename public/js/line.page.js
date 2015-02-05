@@ -6,7 +6,9 @@ var LinePage = React.createClass({
   render: function () {
     return (
       <App {...this.props}>
-        <Line {...this.props}/>
+        <div className="content content_type_line">
+          <Line {...this.props}/>
+        </div>
       </App>
     )
   }

@@ -43,6 +43,8 @@ var Line = React.createClass({
             <LineFilterSports />
           </div>
           <div className="line__main">
+            <div className="line__additional"></div>
+            <div className="line__separator"></div>
             <LineSports sports={this.props.sports} />
           </div>
           <div className="line__coupon"></div>
