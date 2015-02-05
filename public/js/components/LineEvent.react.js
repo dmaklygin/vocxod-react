@@ -60,8 +60,8 @@ var LineEvent = React.createClass({
         </td>
         <td className="line-event__info">
           <div className="line-event__players">
-            <div className="line-event__player">"1.{event.home}"</div>
-            <div className="line-event__player">{event.away}</div>
+            <div className="line-event__player">1. {event.home}</div>
+            <div className="line-event__player">2. {event.away}</div>
           </div>
           <div className="line-event__description">
 
