@@ -3,9 +3,26 @@ var React = require('react');
 
 var LineSports = React.createClass({
 
+  checkSport: function(sport) {
+
+    if (!sport.tournaments || !sport.tournaments.length) {
+      return false;
+    }
+
+    return true;
+  },
+
   render: function() {
-    var sports = {};
+    var
+      _this = this,
+      sports = {};
+
     this.props.sports.forEach(function(sport) {
+
+      if (!_this.checkSport(sport)) {
+        return;
+      }
+
       var classes = 'line-sport__title sport-bar sport-bar_t_' + sport.slug;
       sports['l-s-' + sport.id] = (
         <div className="line-sport line-sports__item">
