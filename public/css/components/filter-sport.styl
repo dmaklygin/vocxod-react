@@ -1,0 +1,508 @@
+.filter-sport {
+  display: block
+}
+
+.filter-sport:first-child {
+  border-radius: 5px 5px 0 0
+}
+
+.filter-sport:last-child {
+  border-radius: 0 0 5px 5px
+}
+
+.filter-sport__label {
+  display: block;
+  position: relative;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+
+  white-space: nowrap;
+  cursor: pointer;
+
+  background: #20272f
+}
+
+.filter-sport__label::after {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  content: "";
+  margin: -5px 0 0 0;
+  width: 6px;
+  height: 10px;
+
+  cursor: pointer
+
+  background: url(/assets/icons/arrow-66d53265ce36370d32d68313afd1d16a.png);
+}
+
+.filter-sport__label:hover {
+  background: #2a343e
+}
+
+.filter-sport__checkbox {
+  display: inline-block;
+  vertical-align: middle
+}
+
+.filter-sport__name {
+  display: inline-block;
+  vertical-align: middle;
+  width: 80%;
+  margin: 0 0 0 2px;
+
+  user-select: none
+}
+
+.filter-sport.filter-sport_type_all .filter-sport__label {
+  height: $elementHeigth;
+  line-height: $elementHeigth;
+  background: #151a20;
+
+  border-radius: 5px;
+}
+
+.filter-sport.filter-sport_type_all .filter-sport__label::after {
+  background: none
+}
+
+.filter-sport.filter-sport_type_all .filter-sport__label:hover {
+  background: #1f272f
+}
+
+.filter-sport.filter-sport_type_all .filter-sport__checkbox {
+  height: $elementHeigth
+}
+
+.filter-sport__tournaments {
+  display: none;
+  padding: 0 10px 10px;
+  overflow: hidden;
+  white-space: nowrap
+
+  font-size: 12px;
+}
+
+.filter-sport__tournament {
+  padding: 0 0 0 18px;
+  margin: 10px 0 0 0;
+  max-width: 100%;
+
+
+  user-select: none;
+  cursor: pointer
+
+  background: url(/assets/icons/success-green-852f865722faf990574266d1cc038bc7.png) 0 3px no-repeat;
+  color: #a9bfa5;
+}
+
+.filter-sport__tournament_state_active {
+  color: white;
+  background: url(/assets/icons/success-e5cd55d4815fc260fc9fdb13edb4b86b.png) 0 3px no-repeat;
+  font-weight: bold
+}
+
+.filter-sport_state_open .filter-sport__label::after {
+  transform: rotate(90deg)
+}
+
+.filter-sport_state_open .filter-sport__tournaments {
+  display: block
+}
+
+.filter-sport_state_open.filter-sport__t_soccer .filter-sport__label {
+  background-color: #11300b
+}
+
+.filter-sport_state_open.filter-sport__t_soccer .filter-sport__tournament {
+  background-color: #0c2807
+}
+
+.filter-sport_state_open.filter-sport__t_soccer .filter-sport__tournaments {
+  background-color: #0c2807
+}
+
+.filter-sport_state_open.filter-sport__t_basketball .filter-sport__label {
+  background-color: #3c1300
+}
+
+.filter-sport_state_open.filter-sport__t_basketball .filter-sport__tournament {
+  background-color: #531c00
+}
+
+.filter-sport_state_open.filter-sport__t_basketball .filter-sport__tournaments {
+  background-color: #531c00
+}
+
+.filter-sport_state_open.filter-sport__t_hockey .filter-sport__label {
+  background-color: #060045
+}
+
+.filter-sport_state_open.filter-sport__t_hockey .filter-sport__tournament {
+  background-color: #080156
+}
+
+.filter-sport_state_open.filter-sport__t_hockey .filter-sport__tournaments {
+  background-color: #080156
+}
+
+.filter-sport_state_open.filter-sport__t_tennis .filter-sport__label {
+  background-color: #5f6f00
+}
+
+.filter-sport_state_open.filter-sport__t_tennis .filter-sport__tournament {
+  background-color: #6d7c01
+}
+
+.filter-sport_state_open.filter-sport__t_tennis .filter-sport__tournaments {
+  background-color: #6d7c01
+}
+
+.filter-sport_state_open.filter-sport__t_austr_football .filter-sport__label {
+  background-color: #6e071b
+}
+
+.filter-sport_state_open.filter-sport__t_austr_football .filter-sport__tournament {
+  background-color: #7e0d23
+}
+
+.filter-sport_state_open.filter-sport__t_austr_football .filter-sport__tournaments {
+  background-color: #7e0d23
+}
+
+.filter-sport_state_open.filter-sport__t_auto_motosport .filter-sport__label {
+  background-color: #393939
+}
+
+.filter-sport_state_open.filter-sport__t_auto_motosport .filter-sport__tournament {
+  background-color: #474747
+}
+
+.filter-sport_state_open.filter-sport__t_auto_motosport .filter-sport__tournaments {
+  background-color: #474747
+}
+
+.filter-sport_state_open.filter-sport__t_football .filter-sport__label {
+  background-color: #512d06
+}
+
+.filter-sport_state_open.filter-sport__t_football .filter-sport__tournament {
+  background-color: #59350d
+}
+
+.filter-sport_state_open.filter-sport__t_football .filter-sport__tournaments {
+  background-color: #59350d
+}
+
+.filter-sport_state_open.filter-sport__t_baseball .filter-sport__label {
+  background-color: #555555
+}
+
+.filter-sport_state_open.filter-sport__t_baseball .filter-sport__tournament {
+  background-color: #676767
+}
+
+.filter-sport_state_open.filter-sport__t_baseball .filter-sport__tournaments {
+  background-color: #676767
+}
+
+.filter-sport_state_open.filter-sport__t_box .filter-sport__label {
+  background-color: #8f4d10
+}
+
+.filter-sport_state_open.filter-sport__t_box .filter-sport__tournament {
+  background-color: #9d5819
+}
+
+.filter-sport_state_open.filter-sport__t_box .filter-sport__tournaments {
+  background-color: #9d5819
+}
+
+.filter-sport_state_open.filter-sport__t_water_polo .filter-sport__label {
+  background-color: #007176
+}
+
+.filter-sport_state_open.filter-sport__t_water_polo .filter-sport__tournament {
+  background-color: #00868a
+}
+
+.filter-sport_state_open.filter-sport__t_water_polo .filter-sport__tournaments {
+  background-color: #00868a
+}
+
+.filter-sport_state_open.filter-sport__t_handball .filter-sport__label {
+  background-color: #00764b
+}
+
+.filter-sport_state_open.filter-sport__t_handball .filter-sport__tournament {
+  background-color: #008758
+}
+
+.filter-sport_state_open.filter-sport__t_handball .filter-sport__tournaments {
+  background-color: #008758
+}
+
+.filter-sport_state_open.filter-sport__t_golf .filter-sport__label {
+  background-color: #006600
+}
+
+.filter-sport_state_open.filter-sport__t_golf .filter-sport__tournament {
+  background-color: #037004
+}
+
+.filter-sport_state_open.filter-sport__t_golf .filter-sport__tournaments {
+  background-color: #037004
+}
+
+.filter-sport_state_open.filter-sport__t_gael_football .filter-sport__label {
+  background-color: #073919
+}
+
+.filter-sport_state_open.filter-sport__t_gael_football .filter-sport__tournament {
+  background-color: #104323
+}
+
+.filter-sport_state_open.filter-sport__t_gael_football .filter-sport__tournaments {
+  background-color: #104323
+}
+
+.filter-sport_state_open.filter-sport__t_darts .filter-sport__label {
+  background-color: #2e0639
+}
+
+.filter-sport_state_open.filter-sport__t_darts .filter-sport__tournament {
+  background-color: #390d43
+}
+
+.filter-sport_state_open.filter-sport__t_darts .filter-sport__tournaments {
+  background-color: #390d43
+}
+
+.filter-sport_state_open.filter-sport__t_cricket .filter-sport__label {
+  background-color: #34130f
+}
+
+.filter-sport_state_open.filter-sport__t_cricket .filter-sport__tournament {
+  background-color: #3e1f1b
+}
+
+.filter-sport_state_open.filter-sport__t_cricket .filter-sport__tournaments {
+  background-color: #3e1f1b
+}
+
+.filter-sport_state_open.filter-sport__t_lottery .filter-sport__label {
+  background-color: #004a50
+}
+
+.filter-sport_state_open.filter-sport__t_lottery .filter-sport__tournament {
+  background-color: #00555a
+}
+
+.filter-sport_state_open.filter-sport__t_lottery .filter-sport__tournaments {
+  background-color: #00555a
+}
+
+.filter-sport_state_open.filter-sport__t_horse .filter-sport__label {
+  background-color: #08032b
+}
+
+.filter-sport_state_open.filter-sport__t_horse .filter-sport__tournament {
+  background-color: #11083f
+}
+
+.filter-sport_state_open.filter-sport__t_horse .filter-sport__tournaments {
+  background-color: #11083f
+}
+
+.filter-sport_state_open.filter-sport__t_beach_volleyball .filter-sport__label {
+  background-color: #b19d00
+}
+
+.filter-sport_state_open.filter-sport__t_beach_volleyball .filter-sport__tournament {
+  background-color: #c3ac00
+}
+
+.filter-sport_state_open.filter-sport__t_beach_volleyball .filter-sport__tournaments {
+  background-color: #c3ac00
+}
+
+.filter-sport_state_open.filter-sport__t_beach_soccer .filter-sport__label {
+  background-color: #b9471c
+}
+
+.filter-sport_state_open.filter-sport__t_beach_soccer .filter-sport__tournament {
+  background-color: #c8562b
+}
+
+.filter-sport_state_open.filter-sport__t_beach_soccer .filter-sport__tournaments {
+  background-color: #c8562b
+}
+
+.filter-sport_state_open.filter-sport__t_rugby .filter-sport__label {
+  background-color: #2e5f25
+}
+
+.filter-sport_state_open.filter-sport__t_rugby .filter-sport__tournament {
+  background-color: #416d39
+}
+
+.filter-sport_state_open.filter-sport__t_rugby .filter-sport__tournaments {
+  background-color: #416d39
+}
+
+.filter-sport_state_open.filter-sport__t_volleyball .filter-sport__label {
+  background-color: #247c95
+}
+
+.filter-sport_state_open.filter-sport__t_volleyball .filter-sport__tournament {
+  background-color: #3089a3
+}
+
+.filter-sport_state_open.filter-sport__t_volleyball .filter-sport__tournaments {
+  background-color: #3089a3
+}
+
+.filter-sport_state_open.filter-sport__t_snooker .filter-sport__label {
+  background-color: #212121
+}
+
+.filter-sport_state_open.filter-sport__t_snooker .filter-sport__tournament {
+  background-color: #2d2d2d
+}
+
+.filter-sport_state_open.filter-sport__t_snooker .filter-sport__tournaments {
+  background-color: #2d2d2d
+}
+
+.filter-sport_state_open.filter-sport__t_dog .filter-sport__label {
+  background-color: #4e2453
+}
+
+.filter-sport_state_open.filter-sport__t_dog .filter-sport__tournament {
+  background-color: #57305b
+}
+
+.filter-sport_state_open.filter-sport__t_dog .filter-sport__tournaments {
+  background-color: #57305b
+}
+
+.filter-sport_state_open.filter-sport__t_billiards .filter-sport__label {
+  background-color: #081f4b
+}
+
+.filter-sport_state_open.filter-sport__t_billiards .filter-sport__tournament {
+  background-color: #0e2653
+}
+
+.filter-sport_state_open.filter-sport__t_billiards .filter-sport__tournaments {
+  background-color: #0e2653
+}
+
+.filter-sport_state_open.filter-sport__t_futsal .filter-sport__label {
+  background-color: #193616
+}
+
+.filter-sport_state_open.filter-sport__t_futsal .filter-sport__tournament {
+  background-color: #213d1f
+}
+
+.filter-sport_state_open.filter-sport__t_futsal .filter-sport__tournaments {
+  background-color: #213d1f
+}
+
+.filter-sport_state_open.filter-sport__t_herling .filter-sport__label {
+  background-color: #734c00
+}
+
+.filter-sport_state_open.filter-sport__t_herling .filter-sport__tournament {
+  background-color: #895c00
+}
+
+.filter-sport_state_open.filter-sport__t_herling .filter-sport__tournaments {
+  background-color: #895c00
+}
+
+.filter-sport_state_open.filter-sport__t_field_hockey .filter-sport__label {
+  background-color: #3b570a
+}
+
+.filter-sport_state_open.filter-sport__t_field_hockey .filter-sport__tournament {
+  background-color: #435f12
+}
+
+.filter-sport_state_open.filter-sport__t_field_hockey .filter-sport__tournaments {
+  background-color: #435f12
+}
+
+.filter-sport_state_open.filter-sport__t_chess .filter-sport__label {
+  background-color: #5f5f5f
+}
+
+.filter-sport_state_open.filter-sport__t_chess .filter-sport__tournament {
+  background-color: #7b7b7b
+}
+
+.filter-sport_state_open.filter-sport__t_chess .filter-sport__tournaments {
+  background-color: #7b7b7b
+}
+
+.filter-sport_state_open.filter-sport__t_electronic_sport .filter-sport__label {
+  background-color: #3c0b3e
+}
+
+.filter-sport_state_open.filter-sport__t_electronic_sport .filter-sport__tournament {
+  background-color: #49174a
+}
+
+.filter-sport_state_open.filter-sport__t_electronic_sport .filter-sport__tournaments {
+  background-color: #49174a
+}
+
+.filter-sport_state_open.filter-sport__t_culture .filter-sport__label {
+  background-color: #1b105a
+}
+
+.filter-sport_state_open.filter-sport__t_culture .filter-sport__tournament {
+  background-color: #24186a
+}
+
+.filter-sport_state_open.filter-sport__t_culture .filter-sport__tournaments {
+  background-color: #24186a
+}
+
+.filter-sport_state_open.filter-sport__t_cicle_racing .filter-sport__label {
+  background-color: #57152a
+}
+
+.filter-sport_state_open.filter-sport__t_cicle_racing .filter-sport__tournament {
+  background-color: #681f36
+}
+
+.filter-sport_state_open.filter-sport__t_cicle_racing .filter-sport__tournaments {
+  background-color: #681f36
+}
+
+.filter-sport_state_open.filter-sport__t_badminton .filter-sport__label {
+  background-color: #625a0e
+}
+
+.filter-sport_state_open.filter-sport__t_badminton .filter-sport__tournament {
+  background-color: #686119
+}
+
+.filter-sport_state_open.filter-sport__t_badminton .filter-sport__tournaments {
+  background-color: #686119
+}
+
+.filter-sport_state_open.filter-sport__t_fight .filter-sport__label {
+  background-color: #0e302c
+}
+
+.filter-sport_state_open.filter-sport__t_fight .filter-sport__tournament {
+  background-color: #163b38
+}
+
+.filter-sport_state_open.filter-sport__t_fight .filter-sport__tournaments {
+  background-color: #163b38
+}

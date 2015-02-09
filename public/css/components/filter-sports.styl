@@ -1,0 +1,57 @@
+.filter-sports {
+  display: block;
+  height: 100%;
+}
+
+.filter-sports__container {
+  height: 100%;
+}
+
+.filter-sports__all-checker {
+  height: $elementHeigth;
+}
+
+.filter-sports__separator {
+  display: block;
+  height: $gapHeight;
+}
+
+.filter-sports__items {
+  height: 100%;
+  padding: 0 0 ($elementHeigth + $gapHeight) 0;
+  overflow: hidden;
+  overflow-y: scroll;
+
+  border-top: 1px solid #41464c;
+  background: #20272f;
+
+  border-radius: 5px;
+}
+
+
+.filter-sports__group {
+  border-top: 1px solid #41464c
+}
+
+.filter-sports__group-name {
+
+  padding: 10px;
+
+  border-bottom: 1px solid #14191e
+  background: #20272f;
+
+  font-size: $largeFontSize;
+}
+
+.filter-sports__item {
+  border-bottom: 1px solid #14191e;
+  border-top: 1px solid #41464c;
+}
+
+.filter-sports__item:first-child {
+  border-top: none;
+}
+
+.filter-sports__item.filter-sport {
+  border-radius: 0
+}
