@@ -7,15 +7,23 @@ module.exports = {
   },
 
   componentDidMount: function() {
+    // Upload new data
+    this.pullUpdates();
+    // Create updating interval
+    window.setInterval(this.pullUpdates.bind(this), this.timeout * 1000);
+  },
+
+  /**
+   * Uploads line updates
+   */
+  pullUpdates: function() {
     var _this = this;
 
-    window.setInterval(function() {
-      API.request(_this.command, { line_version: _this.version })
-        .done(function (response) {
-          _this.version = response.line_version;
-          _this.updateTournaments(response.tournaments || []);
-        });
-    }, this.timeout * 1000);
+    API.request(this.command, { line_version: this.version })
+      .done(function (response) {
+        _this.version = response.line_version;
+        _this.updateTournaments(response.tournaments || []);
+      });
   },
 
   updateTournaments: function (tournaments) {
