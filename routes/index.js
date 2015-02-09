@@ -36,7 +36,7 @@ router.get('/', function(req, res) {
   res.render('index', { title: 'Sports Line' });
 });
 
-router.get('/line', function(req, res) {
+router.get('/prematch', function(req, res) {
 
   // loading sports
   // @todo set cache to loaging
@@ -48,13 +48,23 @@ router.get('/line', function(req, res) {
     }
     if (!sports.length) sports = sportsDefault;
 
-    res.render('line', { title: 'Sports Line', data: { sports: sports } });
+    res.render('prematch', { title: 'Sports Prematch', data: { sports: sports } });
   });
 });
 
 router.get('/live', function(req, res) {
-  var sports = {};
-  res.render('live', { title: 'Sports Live', data: { sports: sports } });
+
+  request(config.api + 'command=sports', function (error, response, body) {
+    var sports = [];
+    if (!error && response.statusCode == 200) {
+      sports = JSON.parse(body);
+    }
+    if (!sports.length) sports = sportsDefault;
+
+    res.render('live', { title: 'Sports Live', data: { sports: sports } });
+  });
+
+
 });
 
 module.exports = router;

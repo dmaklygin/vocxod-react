@@ -1,4 +1,4 @@
-var LineTournaments = require('./LineTournaments.react');
+var LineTournaments = require('./LineTournaments.react.js');
 var React = require('react');
 
 var LineSports = React.createClass({

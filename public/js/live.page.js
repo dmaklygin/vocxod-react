@@ -1,12 +1,14 @@
 var App = require('./app');
-var Live = require('./components/Live.react');
+var Live = require('./components/live/Live.react');
 var React = require('react');
 
 var LivePage = React.createClass({
   render: function () {
     return (
       <App {...this.props}>
-        <Live {...this.props}/>
+        <div className="content content_type_line">
+          <Live {...this.props}/>
+        </div>
       </App>
     )
   }

@@ -1,13 +1,13 @@
 var App = require('./app');
-var Line = require('./components/Line.react');
+var Prematch = require('./components/prematch/Prematch.react');
 var React = require('react');
 
-var LinePage = React.createClass({
+var PrematchPage = React.createClass({
   render: function () {
     return (
       <App {...this.props}>
         <div className="content content_type_line">
-          <Line {...this.props}/>
+          <Prematch {...this.props}/>
         </div>
       </App>
     )
@@ -17,14 +17,14 @@ var LinePage = React.createClass({
 
 module.exports = {
 
-  LinePage: LinePage,
+  PrematchPage: PrematchPage,
 
   toString: function(args) {
-    return React.renderToStaticMarkup(<LinePage {...args} />);
+    return React.renderToStaticMarkup(<PrematchPage {...args} />);
   },
 
   render: function(props) {
     window.React = React;
-    React.render(<LinePage {...props} />, document.querySelector('.app'));
+    React.render(<PrematchPage {...props} />, document.querySelector('.app'));
   }
 };
