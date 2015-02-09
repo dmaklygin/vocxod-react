@@ -9,7 +9,7 @@ var LineSports = React.createClass({
       return false;
     }
 
-    if (!sport.tournaments || !sport.tournaments.length) {
+    if (!sport.tournaments.length) {
       return false;
     }
 

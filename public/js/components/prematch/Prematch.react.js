@@ -30,7 +30,7 @@ var Prematch = React.createClass({
       <div className="line">
         <div className="line__container row">
           <div className="line__sport">
-            <LineFilterSports />
+            <LineFilterSports sports={this.state.sports} />
           </div>
           <div className="line__main">
             <div onClick={this.changeFilter}>Фильтр</div>
