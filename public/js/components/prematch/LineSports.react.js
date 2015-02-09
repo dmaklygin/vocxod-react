@@ -5,6 +5,10 @@ var LineSports = React.createClass({
 
   checkSport: function(sport) {
 
+    if (!sport.active) {
+      return false;
+    }
+
     if (!sport.tournaments || !sport.tournaments.length) {
       return false;
     }

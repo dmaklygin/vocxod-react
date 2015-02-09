@@ -4,6 +4,12 @@ var LineFilterSports = require('./LineFilterSports.react');
 var LineSports = require('./LineSports.react');
 
 var Prematch = React.createClass({
+
+  propTypes: {
+    // Main Collection
+    sports: React.PropTypes.array
+  },
+
   mixins: [LineMixin],
   // current line version
   version: 0,
@@ -11,6 +17,13 @@ var Prematch = React.createClass({
   timeout: 60,
   // Request command to pull data from server
   command: 'line',
+
+  changeFilter: function() {
+    this.state.sports.forEach(function(sport) {
+      sport.active = !sport.active;
+    });
+    this.setState(this.state);
+  },
 
   render: function () {
     return (
@@ -20,9 +33,10 @@ var Prematch = React.createClass({
             <LineFilterSports />
           </div>
           <div className="line__main">
+            <div onClick={this.changeFilter}>Фильтр</div>
             <div className="line__additional"></div>
             <div className="line__separator"></div>
-            <LineSports sports={this.props.sports} />
+            <LineSports sports={this.state.sports} />
           </div>
           <div className="line__coupon"></div>
         </div>

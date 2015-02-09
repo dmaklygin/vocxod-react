@@ -3,6 +3,12 @@ var API = require('../services/api');
 module.exports = {
 
   getInitialState: function() {
+
+    this.props.sports.forEach(function(sport) {
+      sport.tournaments || (sport.tournaments = []);
+      sport.active = true;
+    });
+
     return { sports: this.props.sports };
   },
 
@@ -31,7 +37,6 @@ module.exports = {
     tournaments && tournaments.forEach(function (tournament) {
       var sport = _this.state.sports.filter(function (sport) { return sport.id == tournament.sport_id }).shift();
       if (sport) {
-        sport.tournaments || (sport.tournaments = []);
         sport.tournaments.push(tournament);
       }
     });
