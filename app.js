@@ -7,6 +7,10 @@ var app = express();
 var reactViews = require('express-react-views');
 var routes = require('./routes/index');
 
+if (app.get('env') == 'production') {
+  app.use(express.compress());
+}
+
 app
   .set('views', path.join(__dirname, 'views'))
   .set('view engine', 'js')

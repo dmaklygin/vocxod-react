@@ -37,9 +37,14 @@ gulp.task('css', function () {
     .pipe(gulp.dest('dist/css/'));
 });
 
-gulp.task('build', ['uglify', 'css']);
+gulp.task('images', function () {
+  gulp.src(['public/images/**/*', 'public/images/*'])
+    .pipe(gulp.dest('dist/images'));
+});
 
-gulp.task('default', ['browserify', 'css']);
+gulp.task('build', ['uglify', 'css', 'images']);
+
+gulp.task('default', ['browserify', 'css', 'images']);
 
 gulp.task('serve', function () {
   gulp.watch('public/**', ['default']);
