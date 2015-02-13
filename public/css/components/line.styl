@@ -1,8 +1,6 @@
 .line
-  position: relative;
   display: block;
   height: 100%;
-  overflow: hidden;
 
 .line__container
   height: 100%;
@@ -10,21 +8,26 @@
 .line__sport,
 .line__main,
 .line__coupon
-  position relative;
   padding: 0 ($padding/2);
   float: left;
   height: 100%;
   min-height: 100px;
+  background: $background;
 
 .line__sport
+  position fixed;
+  left: 0;
   width: 173px;
 
 .line__main
   width: 788px;
-  padding: 0;
+  height: auto;
+  margin: 0 0 0 173px;
 
 .line__coupon
-  width: 310px;
+  position fixed;
+  right: 0;
+  width: 314px;
 
 .line__additional.row
   height: $elementHeigth;
