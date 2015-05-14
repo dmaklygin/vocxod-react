@@ -8,7 +8,7 @@
   },
   "scripts": {
     "start": "node ./bin/www",
-    "postinstall": "npm run build",
+    "postinstall": "NODE_ENV=production gulp build",
     "build": "NODE_ENV=production ./node_modules/gulp/bin/gulp.js build",
     "test": "jest"
   },
